@@ -9,6 +9,7 @@ import Footer from "../components/Layout/Footer";
 import Header from "../components/Layout/Header";
 
 export default function Home() {
+  document.title = "Golden Mask || Home";
   return (
     <>
       <Header />
