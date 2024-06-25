@@ -10,9 +10,13 @@ export default function Header({ whiteHeader }) {
     >
       <img src={IMG} alt="LOGO" />
       <nav className="items-center gap-6 hidden md:flex">
-        <a className=" text-main-color transition duration-300" href="/">
+        <Link
+          to="/packages/12"
+          className=" text-main-color transition duration-300"
+          href="/"
+        >
           Home
-        </a>
+        </Link>
         <a
           className={`${
             whiteHeader ? "text-black" : "text-white"
