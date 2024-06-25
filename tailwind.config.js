@@ -8,6 +8,7 @@ export default {
       },
       backgroundImage: {
         hero: "url('/Hero.jpeg')",
+        heroPackage: "url('/packageHero.png')",
       },
     },
   },

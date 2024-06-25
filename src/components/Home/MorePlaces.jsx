@@ -45,7 +45,7 @@ export default function MorePlaces() {
             </div>
           </div>
         </div>
-        <div className="max-h-[332.67px] relative group rounded-[2rem] overflow-hidden">
+        <div className="max-h-[332.67px] min-h-[332.67px] md:min-h-full relative group rounded-[2rem] overflow-hidden">
           {" "}
           <img
             src={IMG2}
