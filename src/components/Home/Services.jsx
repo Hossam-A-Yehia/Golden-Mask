@@ -3,9 +3,20 @@ import IMG1 from "../../assets/Home/service1.png";
 import IMG2 from "../../assets/Home/service2.png";
 import IMG3 from "../../assets/Home/service3.png";
 import IMG_BG from "../../assets/Home//pg-serv.png";
+import { motion } from "framer-motion";
+
 export default function Services() {
   return (
-    <section id="services" className="mt-[80px] container mx-auto relative">
+    <motion.section
+      initial={{ opacity: 0, x: -100 }}
+      transition={{ duration: 1 }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
+      id="services"
+      className="mt-[80px] container mx-auto relative"
+    >
       <SpecialHeading heading="Our Services" title="We Offer Best Services" />
       <img
         src={IMG_BG}
@@ -82,6 +93,6 @@ export default function Services() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

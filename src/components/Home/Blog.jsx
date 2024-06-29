@@ -4,16 +4,25 @@ import IMG2 from "../../assets/Home/blog/blog2.jpeg";
 import IMG3 from "../../assets/Home/blog/blog3.jpeg";
 import IMG4 from "../../assets/Home/blog/blog4.jpeg";
 import { IoArrowForward } from "react-icons/io5";
+import { motion } from "framer-motion";
+
 export default function Blog() {
   return (
     <section
       id="blog"
-      className="mt-[80px] container mx-auto relative px-3 lg:px-0"
+      className="mt-[80px] container mx-auto relative px-3 lg:px-0 overflow-hidden"
     >
       <SpecialHeading heading="Our Blog" title="Our Blog and Articles" />
       <div className="flex items-center justify-between flex-wrap ">
         <div className="flex flex-col gap-9 w-full lg:w-1/2 mb-[36px] lg:mb-0">
-          <div className="flex flex-col md:flex-row items-center gap-4">
+          <motion.div
+            initial={{ x: -200 }}
+            transition={{ duration: 0.7 }}
+            whileInView={{
+              x: 0,
+            }}
+            className="flex flex-col md:flex-row items-center gap-4"
+          >
             <img
               src={IMG1}
               alt=""
@@ -35,8 +44,15 @@ export default function Blog() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col md:flex-row items-center gap-4">
+          </motion.div>
+          <motion.div
+            initial={{ x: -200 }}
+            transition={{ duration: 0.7 }}
+            whileInView={{
+              x: 0,
+            }}
+            className="flex flex-col md:flex-row items-center gap-4"
+          >
             <img
               src={IMG3}
               alt=""
@@ -60,10 +76,17 @@ export default function Blog() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
         <div className="flex flex-col gap-9 w-full lg:w-1/2 mb-[36px] lg:mb-0">
-          <div className="flex flex-col md:flex-row items-center gap-4">
+          <motion.div
+            initial={{ x: 200 }}
+            transition={{ duration: 1 }}
+            whileInView={{
+              x: 0,
+            }}
+            className="flex flex-col md:flex-row items-center gap-4"
+          >
             <img
               src={IMG2}
               alt=""
@@ -87,8 +110,15 @@ export default function Blog() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col md:flex-row items-center gap-4">
+          </motion.div>
+          <motion.div
+            initial={{ x: 200 }}
+            transition={{ duration: 1 }}
+            whileInView={{
+              x: 0,
+            }}
+            className="flex flex-col md:flex-row items-center gap-4"
+          >
             <img
               src={IMG4}
               alt=""
@@ -110,7 +140,7 @@ export default function Blog() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="border border-main-color py-2 px-5 rounded-full flex items-center gap-3 text-slate-900 w-fit mx-auto mt-[50px] font-bold hover:bg-main-color hover:text-white duration-300 cursor-pointer">

@@ -4,10 +4,10 @@ export default function Trips() {
   return (
     <div className=" col-span-3 lg:col-span-2">
       <div className="flex items-center justify-between flex-wrap">
-        <CardTrip img={IMG1} col={2} packages />
-        <CardTrip img={IMG1} col={2} packages />
-        <CardTrip img={IMG1} col={2} packages />
-        <CardTrip img={IMG1} col={2} packages />
+        <CardTrip img={IMG1} packages />
+        <CardTrip img={IMG1} packages />
+        <CardTrip img={IMG1} packages />
+        <CardTrip img={IMG1} packages />
       </div>
     </div>
   );

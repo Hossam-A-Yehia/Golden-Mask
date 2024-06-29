@@ -10,11 +10,13 @@ import IMG8 from "../../assets/Home/places/Place8.jpeg";
 import IMG9 from "../../assets/Home/places/Place9.jpeg";
 import IMG10 from "../../assets/Home/places/Place10.jpeg";
 import { IoArrowForward } from "react-icons/io5";
+import { motion } from "framer-motion";
+
 export default function MorePlaces() {
   return (
     <section
       id="places"
-      className="mt-[80px] container mx-auto relative px-3 md:px-0"
+      className="mt-[80px] container mx-auto relative px-3 md:px-0 overflow-hidden"
     >
       <SpecialHeading
         title="Discover More Places in EGYPT"
@@ -22,7 +24,14 @@ export default function MorePlaces() {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 grid-rows-1 lg:grid-rows-5 ">
-        <div className="   row-span-1  lg:row-span-2 max-h-[590px] relative group rounded-[2rem] overflow-hidden">
+        <motion.div
+          initial={{ x: -200 }}
+          transition={{ duration: 1 }}
+          whileInView={{
+            x: 0,
+          }}
+          className="   row-span-1  lg:row-span-2 max-h-[590px] relative group rounded-[2rem] overflow-hidden"
+        >
           <img
             src={IMG1}
             alt=""
@@ -44,8 +53,15 @@ export default function MorePlaces() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="max-h-[332.67px] min-h-[332.67px] md:min-h-full relative group rounded-[2rem] overflow-hidden">
+        </motion.div>
+        <motion.div
+          initial={{ y: -200 }}
+          transition={{ duration: 1 }}
+          whileInView={{
+            y: 0,
+          }}
+          className="max-h-[332.67px] min-h-[332.67px] md:min-h-full relative group rounded-[2rem] overflow-hidden"
+        >
           {" "}
           <img
             src={IMG2}
@@ -70,8 +86,15 @@ export default function MorePlaces() {
               </div>
             </div>
           </div>
-        </div>
-        <div className=" row-span-1  lg:row-span-2 max-h-[598px] relative group rounded-[2rem] overflow-hidden">
+        </motion.div>
+        <motion.div
+          initial={{ x: 200 }}
+          transition={{ duration: 1 }}
+          whileInView={{
+            x: 0,
+          }}
+          className=" row-span-1  lg:row-span-2 max-h-[598px] relative group rounded-[2rem] overflow-hidden"
+        >
           {" "}
           <img
             src={IMG3}
@@ -98,9 +121,15 @@ export default function MorePlaces() {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className=" row-span-1  lg:row-span-2 max-h-[623px] relative group rounded-[2rem] overflow-hidden">
+        </motion.div>
+        <motion.div
+          initial={{ y: 200 }}
+          transition={{ duration: 1 }}
+          whileInView={{
+            y: 0,
+          }}
+          className=" row-span-1  lg:row-span-2 max-h-[623px] relative group rounded-[2rem] overflow-hidden"
+        >
           <img
             src={IMG5}
             alt=""
@@ -125,8 +154,15 @@ export default function MorePlaces() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="max-h-[367.69px] relative group rounded-[2rem] overflow-hidden">
+        </motion.div>
+        <motion.div
+          initial={{ x: -200 }}
+          transition={{ duration: 1 }}
+          whileInView={{
+            x: 0,
+          }}
+          className="max-h-[367.69px] relative group rounded-[2rem] overflow-hidden"
+        >
           <img
             src={IMG4}
             alt=""
@@ -152,8 +188,15 @@ export default function MorePlaces() {
               </div>
             </div>
           </div>
-        </div>
-        <div className=" max-h-[358px] relative group rounded-[2rem] overflow-hidden">
+        </motion.div>
+        <motion.div
+          initial={{ x: 200 }}
+          transition={{ duration: 1 }}
+          whileInView={{
+            x: 0,
+          }}
+          className=" max-h-[358px] relative group rounded-[2rem] overflow-hidden"
+        >
           <img
             src={IMG6}
             alt=""
@@ -175,8 +218,15 @@ export default function MorePlaces() {
               </div>
             </div>
           </div>
-        </div>
-        <div className=" col-span-1 lg:col-span-2 max-h-[260px] relative group rounded-[2rem] overflow-hidden ">
+        </motion.div>
+        <motion.div
+          initial={{ x: -200 }}
+          transition={{ duration: 1 }}
+          whileInView={{
+            x: 0,
+          }}
+          className=" col-span-1 lg:col-span-2 max-h-[260px] relative group rounded-[2rem] overflow-hidden "
+        >
           <img
             src={IMG7}
             alt=""
@@ -200,8 +250,15 @@ export default function MorePlaces() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="  row-span-1  lg:row-span-2 max-h-[650px] relative group rounded-[2rem] overflow-hidden">
+        </motion.div>
+        <motion.div
+          initial={{ x: 200 }}
+          transition={{ duration: 1 }}
+          whileInView={{
+            x: 0,
+          }}
+          className="  row-span-1  lg:row-span-2 max-h-[650px] relative group rounded-[2rem] overflow-hidden"
+        >
           <img
             src={IMG10}
             alt=""
@@ -225,8 +282,15 @@ export default function MorePlaces() {
               </div>
             </div>
           </div>
-        </div>
-        <div className=" max-h-[368px]  lg:mt-[-38px] relative group rounded-[2rem] overflow-hidden">
+        </motion.div>
+        <motion.div
+          initial={{ x: -200 }}
+          transition={{ duration: 1 }}
+          whileInView={{
+            x: 0,
+          }}
+          className=" max-h-[368px]  lg:mt-[-38px] relative group rounded-[2rem] overflow-hidden"
+        >
           <img
             src={IMG8}
             alt=""
@@ -250,8 +314,15 @@ export default function MorePlaces() {
               </div>
             </div>
           </div>
-        </div>
-        <div className=" max-h-[368px] lg:mt-[-38px] relative group rounded-[2rem] overflow-hidden">
+        </motion.div>
+        <motion.div
+          initial={{ y: 200 }}
+          transition={{ duration: 1 }}
+          whileInView={{
+            y: 0,
+          }}
+          className=" max-h-[368px] lg:mt-[-38px] relative group rounded-[2rem] overflow-hidden"
+        >
           <img
             src={IMG9}
             alt=""
@@ -275,7 +346,7 @@ export default function MorePlaces() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,9 +1,15 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { IoArrowForward } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
-export default function CardTrip({ img, col, packages }) {
+export default function CardTrip({ img, trip, packages }) {
   return (
-    <div className={`w-full md:w-1/2 lg:w-1/${col} px-[25px] mb-[30px] `}>
+    <Link
+      to="/packages/12"
+      className={`w-full md:w-1/2 ${
+        trip ? "lg:w-1/3" : ""
+      } px-[25px] mb-[30px] `}
+    >
       <div className="flex flex-col gap-3 w-full  p-5 border-[1px] border-slate-200 rounded-[40px]   hover:-translate-y-4 duration-300 hover:border-main-color shadow-lg">
         <div
           className={`flex relative max-w-[346px] ${
@@ -50,6 +56,6 @@ export default function CardTrip({ img, col, packages }) {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

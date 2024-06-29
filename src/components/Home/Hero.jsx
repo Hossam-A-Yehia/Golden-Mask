@@ -1,10 +1,19 @@
 import { IoIosArrowDown } from "react-icons/io";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
     <div className="bg-hero min-h-screen pt-[100px] bg-cover relative flex justify-center items-center font-[Volkhov]">
       <div className=" bg-[#0000009e] absolute top-0 left-0 w-full h-full"></div>
-      <div className="flex flex-col justify-center items-center w-full px-6 lg:px-0 lg:w-[900px]">
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 0.7 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+        }}
+        className="flex flex-col justify-center items-center w-full px-6 lg:px-0 lg:w-[900px]"
+      >
         <div className="flex flex-col w-[400px] md:w-[600px] z-50 text-center ">
           <h1 className="md:text-[70px] text-[50px] leading-[60px] font-bold text-white md:leading-[80px] ">
             Explore Each <br /> Part in Egypt
@@ -77,7 +86,7 @@ export default function Hero() {
             </button>
           </div>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 }
