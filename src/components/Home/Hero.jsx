@@ -14,7 +14,7 @@ export default function Hero() {
         }}
         className="flex flex-col justify-center items-center w-full px-6 lg:px-0 lg:w-[900px]"
       >
-        <div className="flex flex-col w-[400px] md:w-[600px] z-50 text-center ">
+        <div className="flex flex-col w-[400px] md:w-[600px] z-[45] text-center ">
           <h1 className="md:text-[70px] text-[50px] leading-[60px] font-bold text-white md:leading-[80px] ">
             Explore Each <br /> Part in Egypt
           </h1>
@@ -24,7 +24,7 @@ export default function Hero() {
             vocabular
           </p>
         </div>
-        <form className="bg-white flex-col lg:flex-row flex items-center justify-between gap-3 w-full mt-5 p-3 z-50 rounded-lg ">
+        <form className="bg-white flex-col lg:flex-row flex items-center justify-between gap-3 w-full mt-5 p-3 z-[45] rounded-lg ">
           <div className=" w-full lg:w-2/6">
             <label
               htmlFor="default-search"

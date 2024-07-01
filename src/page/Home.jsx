@@ -11,7 +11,7 @@ import Header from "../components/Layout/Header";
 export default function Home() {
   document.title = "Golden Mask || Home";
   return (
-    <>
+    <div className="relative">
       <Header />
       <Hero />
       <Services />
@@ -21,6 +21,6 @@ export default function Home() {
       <Blog />
       <Testimonials />
       <Footer />
-    </>
+    </div>
   );
 }
