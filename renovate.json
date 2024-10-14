@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "schedule": ["before 5am on the first day of the month"],
+  "automerge": true,
+  "packageRules": [
+    {
+      "matchPackageNames": ["react", "react-dom"],
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": ["eslint", "babel"],
+      "groupName": "Linter and Babel updates"
+    }
+  ]
+}
