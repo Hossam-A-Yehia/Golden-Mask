@@ -25,11 +25,22 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Build the project
+      # Step 4: Debug Vercel environment
+      - name: Debug environment
+        run: |
+          echo "VERCEL_PROJECT_ID=${{ secrets.VERCEL_PROJECT_ID }}"
+          echo "VERCEL_ORG_ID=${{ secrets.VERCEL_ORG_ID }}"
+          echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN }}" # Do not print in production for security reasons
+        env:
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+      # Step 5: Build the project
       - name: Build project
         run: npm run build
 
-      # Step 5: Deploy to Vercel
+      # Step 6: Deploy to Vercel
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
         with:
