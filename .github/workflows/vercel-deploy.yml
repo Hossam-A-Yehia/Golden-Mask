@@ -1,12 +1,9 @@
-name: Deploy Golden mask to Vercel
+name: Deploy Golden Mask to Vercel
 
 on:
   push:
     branches:
       - main # Trigger deployment on pushes to the main branch
-  pull_request: # Optional: Trigger on pull requests to preview deployments
-    branches:
-      - "*"
 
 jobs:
   deploy:
@@ -18,15 +15,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Install dependencies (if required)
+      # Step 2: Setup Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Ensure compatibility with React 18
+
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Step 3: Build the project
+      # Step 4: Build the project
       - name: Build project
         run: npm run build
 
-      # Step 4: Deploy to Vercel
+      # Step 5: Deploy to Vercel
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v21
         with:
