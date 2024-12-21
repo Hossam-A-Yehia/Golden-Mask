@@ -3,7 +3,7 @@ name: Deploy Golden Mask to Vercel
 on:
   push:
     branches:
-      - main # Trigger deployment on pushes to the main branch
+      - main # Trigger deployment on pushes tfo the main branch
 
 jobs:
   deploy:
